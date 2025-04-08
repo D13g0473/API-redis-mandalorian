@@ -41,17 +41,17 @@ npm install
 quasar dev
 ```
 
-en la url "http://localhost:9000/#/" deberia aparecer 
+En la url "http://localhost:9000/#/" deberia aparecer 
 ![image](https://github.com/user-attachments/assets/5974197a-99c3-4bef-a59a-23cf38aaf62b)
 
-si el puerto es diferente a 9000, debemos actualizar en el cors de la api, para que permita solicitudes de este sitio: 
+Si el puerto es diferente a 9000, debemos actualizar en el cors de la api, para que permita solicitudes de este sitio 
 
 de:
 ```py
 CORS(app, origins=["http://localhost:9000"], allow_headers=["Content-Type"], methods=["GET", "POST"])
 ```
-a 
+a: 
 ```py
 CORS(app, origins=["http://localhost:900X"], allow_headers=["Content-Type"], methods=["GET", "POST"])
 ```
-donde 900X es el puerto en el que se devanto la app de quasar. 
+Donde 900X es el puerto en el que se levanto la app de quasar. 
