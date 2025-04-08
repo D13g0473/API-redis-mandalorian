@@ -1,11 +1,11 @@
 # API-redis-mandalorian
 TP-2 NSQL
-# python version 
+# Python version 
 
 ```
  3.10.12
 ```
-# node version 
+# Node version 
 
 ```
 20.12.2
@@ -18,21 +18,21 @@ python3 api.py
 
 # Command for quasar deploy  
 
-# in mando-app dir
+# Change Dir to mando-app
 
 ```bash 
 cd mando-app
 ```
-# select node version
+# Select node version
 ```bash 
 nvm use 20.12.2
 ```
 
-# install dependencies
+# Install dependencies
 ```bash
 npm install 
 ```
-# run quasar server in dev mode
+# Run quasar server in dev mode
 ```bash
 quasar dev
 ```
