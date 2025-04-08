@@ -37,4 +37,3 @@ npm install
 quasar dev
 ```
 
-![image](https://github.com/user-attachments/assets/0d408276-d913-42fe-97dd-851157868360)
