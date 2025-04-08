@@ -18,6 +18,11 @@ python3 api.py
 
 # Command for quasar deploy  
 
+#in mando-app dir
+
+```bash 
+cd mando-app
+```
 ```bash 
 nvm use 20.12.2
 ```
