@@ -15,7 +15,7 @@ Diego Arebalo
 
 # Command for python deploy  
 
-In API-redis-mandalorian Dir run 
+In API-redis-mandalorian dir run 
 ```bash 
 python3 api.py
 ```
