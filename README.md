@@ -1,7 +1,10 @@
 # API-redis-mandalorian
 
-#Autor 
-Diego Arebalo 
+# Descripción: 
+La api esta diseñada en python version detallada más adelante y el frontend esta diseñado en quasar framework de vue. 
+Espero sea de su agrado. 
+Cualquier consulta a disposicion.
+ 
 # Version de Python
 
 ```
