@@ -44,7 +44,7 @@ quasar dev
 En la url "http://localhost:9000/#/" deberia aparecer 
 ![image](https://github.com/user-attachments/assets/5974197a-99c3-4bef-a59a-23cf38aaf62b)
 
-Si el puerto es diferente a 9000, debemos actualizar en el cors de la api, para que permita solicitudes de este sitio 
+Si el puerto es diferente a 9000, debemos actualizar en el cors de la api de python, para que permita solicitudes de este sitio.  
 
 de:
 ```py
