@@ -7,7 +7,7 @@ app = Flask(__name__)
 CORS(app, origins=["http://localhost:9000"], allow_headers=["Content-Type"], methods=["GET", "POST"])
 
 # Conexión a Redis
-redis_client = redis.Redis(host="localhost", port=6378, db=0, decode_responses=True)
+redis_client = redis.Redis(host="localhost", port=6379, db=0, decode_responses=True)
 
 # Datos base: capítulos de The Mandalorian
 chapters = {
