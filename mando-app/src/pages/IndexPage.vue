@@ -66,12 +66,16 @@
 
 <script>
 import axios from "axios";
+import { useQuasar} from 'quasar'
+import { ref } from "vue";
 
 export default {
   data() {
     return {
       title:"Capítulos de The Mandalorian",
-      chapters: [], // Datos de los capítulos
+      chapters: ref([]), // Datos de los capítulos
+      url: " http://localhost:5000/",
+      $q : useQuasar(), 
       columns: [
       { name: "id", label: "ID", align: "left", field: "id" },
       { name: "title", label: "Título", align: "left", field: "title" },
@@ -83,7 +87,7 @@ export default {
   methods: {
     async fetchChapters() {
       try {
-        const response = await axios.get("http://localhost:5000/chapters");
+        const response = await axios.get(this.url+"chapters");
         console.log(response);
         this.chapters = response.data;
       } catch (error) {
@@ -93,11 +97,10 @@ export default {
     async reserveChapter(chapterId) {
       try {
         const response = await axios.post(
-          `http://localhost:5000/rent/${chapterId}`
+          `${this.url}rent/${chapterId}`
         );
-        alert(response.data.message);
         this.$q.notify({ type: "positive", message: response.data.message });
-        this.fetchChapters(); // Actualiza la lista de capítulos
+        await this.fetchChapters(); // Actualiza la lista de capítulos
       } catch (error) {
         this.$q.notify({ type: "negative", message: error.response.data.error });
       }
@@ -105,11 +108,11 @@ export default {
     async confirmChapter(chapterId) {
       try {
         const response = await axios.post(
-          `http://localhost:5000/confirm/${chapterId}`,
+          `${this.url}confirm/${chapterId}`,
           { price: 4.99 }
         );
         this.$q.notify({ type: "positive", message: response.data.message });
-        this.fetchChapters(); // Actualiza la lista de capítulos
+       await this.fetchChapters(); // Actualiza la lista de capítulos
       } catch (error) {
         this.$q.notify({ type: "negative", message: error.response.data.error });
       }

@@ -1,0 +1,14 @@
+# Dockerfile.api
+FROM python:3.10-slim
+
+WORKDIR /app
+
+# Copiar solo lo necesario
+COPY api.py .
+
+# Instalar dependencias (si tienes requirements.txt agrégalo aquí)
+RUN pip install flask flask-cors redis
+
+EXPOSE 5000
+
+CMD ["python3", "api.py"]

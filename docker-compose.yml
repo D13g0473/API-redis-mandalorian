@@ -1,0 +1,31 @@
+version: "3"
+
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile.api
+    volumes:
+      - ./api.py:/app/api.py 
+    ports:
+      - "5000:5000"
+    depends_on:
+      - redis
+    environment:
+      - REDIS_HOST=redis
+
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile.frontend
+    volumes:
+      - ./mando-app:/app
+    ports:
+      - "9000:9000"
+    depends_on:
+      - api
+
+  redis:
+    image: redis:latest
+    ports:
+      - "6379:6379"
