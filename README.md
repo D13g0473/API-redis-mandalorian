@@ -15,7 +15,7 @@ Cualquier consulta a disposicion.
 ```
 20.12.2
 ```
-# Comando para lecantar app
+# Comando para levantar app
 ```bash
  sudo docker compose up --build
 ```
