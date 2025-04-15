@@ -17,13 +17,6 @@
               <h5>{{ title }}</h5>
             </center>    
           </div>
-          <q-space></q-space>
-          <div class="col-1">
-            <q-btn
-                icon="refresh"
-                @click="fetchChapters()"
-                />
-          </div>   
         </div>
   
       </template>
@@ -60,7 +53,6 @@
           </q-td>
         </template>
       </q-table>
-    <!-- </q-card> -->
   </q-page>
 </template>
 
